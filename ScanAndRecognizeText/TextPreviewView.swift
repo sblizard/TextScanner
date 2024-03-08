@@ -18,7 +18,15 @@ struct TextPreviewView: View {
                     .padding()
             }
             Button("Extract Data") {
-                extractCodes(input: text)
+                let geneticCodeDictionary = extractCodes(input: text)
+                let HLA_A = valueForPatternInDictionary(dictionary: geneticCodeDictionary, pattern: "^A.$")
+                let HLA_B = valueForPatternInDictionary(dictionary: geneticCodeDictionary, pattern: "^B.$")
+                let HLA_C = valueForPatternInDictionary(dictionary: geneticCodeDictionary, pattern: "^C.$")
+                let HLA_DRB1 = valueForPatternInDictionary(dictionary: geneticCodeDictionary, pattern: "^DRB1$")
+                let HLA_DQA1 = valueForPatternInDictionary(dictionary: geneticCodeDictionary, pattern: "^DQA1$")
+                let HLA_DQB1 = valueForPatternInDictionary(dictionary: geneticCodeDictionary, pattern: "^DQB1$")
+                let HLA_DPA1 = valueForPatternInDictionary(dictionary: geneticCodeDictionary, pattern: "^DPA1$")
+                print("\(HLA_A), \(HLA_B), \(HLA_C), \(HLA_DRB1), \(HLA_DQA1), \(HLA_DQB1), \(HLA_DPA1)")
                     }
                     .padding()
                     .foregroundColor(.white)

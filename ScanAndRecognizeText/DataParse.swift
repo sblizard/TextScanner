@@ -8,11 +8,10 @@
 import Foundation
 
 
-func extractCodes(input: String) {
+func extractCodes(input: String) -> [String : [Int]] {
     
     var geneticCodes: [String : [Int]] = [:]
     
-//    let pattern1 = "D(RB|QA|PA)1.\\d{2}"
     let pattern1 = "\\b[A-Z]+\\*\\d{2}\\b"
     
     guard let regex = try? NSRegularExpression(pattern: pattern1) else {
@@ -35,7 +34,7 @@ func extractCodes(input: String) {
         
     }
     
-    let pattern2 = "D(RB|QA|PA)1.\\d{2}"
+    let pattern2 = "D(RB|QA|QB|PA)1.\\d{2}"
     
     guard let regex2 = try? NSRegularExpression(pattern: pattern2) else {
         fatalError("Invalid regular expression pattern")
@@ -58,5 +57,20 @@ func extractCodes(input: String) {
     }
     
     print(geneticCodes)
+    return geneticCodes
+}
+
+
+func valueForPatternInDictionary(dictionary: [String: [Int]], pattern: String) -> Any {
+    guard let regex = try? NSRegularExpression(pattern: pattern) else {
+        fatalError("Invalid regular expression pattern")
+    }
     
+    for key in dictionary.keys {
+        if regex.firstMatch(in: key, options: [], range: NSRange(key.startIndex..., in: key)) != nil {
+            return dictionary[key]?[0] ?? -1
+        }
+    }
+    
+    return -1
 }
