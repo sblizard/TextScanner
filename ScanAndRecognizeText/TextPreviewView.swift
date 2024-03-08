@@ -17,6 +17,14 @@ struct TextPreviewView: View {
                     .font(.body)
                     .padding()
             }
+            Button("Extract Data") {
+                extractCodes(input: text)
+                    }
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color(UIColor.systemIndigo))
+                    .cornerRadius(10)
+                    .padding(.horizontal, 20)
         }
     }
 }

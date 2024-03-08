@@ -26,10 +26,10 @@ struct ContentView: View {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle(tint: Color(UIColor.systemIndigo)))
                         .padding(.bottom, 20)
-                }
+                } 
                 
             }
-            .navigationTitle("Text Scanner")
+            .navigationTitle("Data Scanner")
             .navigationBarItems(trailing: Button(action: {
                 guard !isRecognizing else { return }
                 showScanner = true
