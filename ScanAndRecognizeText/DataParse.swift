@@ -219,6 +219,28 @@ func extractCodes(input: String) -> [String : [Int]] {
         }
     }
     
+    //Getting phenotype values for HLA-DQA1
+    let pattern10 = "DQA\\d{2}"
+    
+    guard let regex10 = try? NSRegularExpression(pattern: pattern10) else {
+        fatalError("Invalid regular expression pattern")
+    }
+    
+    regex10.enumerateMatches(in: input, range: NSRange(input.startIndex..<input.endIndex, in: input)) { match, _, _ in
+        guard let matchRange = match?.range, let range = Range(matchRange, in: input) else { return }
+        let code = String(input[range])
+        print("Genetic Code: P_\(code)")
+        
+        let geneticPrefix: String = "P_" + String(code.prefix(3))
+        
+        if geneticCodes[geneticPrefix] != nil{
+            geneticCodes[geneticPrefix]?.append(Int(code.suffix(2)) ?? -1)
+        }
+        else {
+            geneticCodes[geneticPrefix] = [Int(code.suffix(2)) ?? -1]
+        }
+    }
+    
 
     
     
