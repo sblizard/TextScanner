@@ -266,7 +266,7 @@ func extractCodes(input: String) -> [String : [Int]] {
 //HLA-B    G✅(G_B*)   P✅(P_B)
 //HLA-C    G✅(G_C*)   P✅(P_Cw)
 //HLA-DRB1 G✅(G_DRB1) P✅(P_DR)
-//HLA-DQA1 G✅(G_DQA1) P
+//HLA-DQA1 G✅(G_DQA1) P✅(P_DQA)
 //HLA-DPA1 G✅(G_DPA1) P✅(P_DPA1)
 //Bw P     N/a         P✅(P_Bw)
 //HLA-DQB1 G✅(G_DQB1) P✅(P_DQ)

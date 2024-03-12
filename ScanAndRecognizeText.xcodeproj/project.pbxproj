@@ -16,6 +16,8 @@
 		C068CDA625EAC098001C5AA9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C068CDA525EAC098001C5AA9 /* Model.swift */; };
 		C068CDA925EAC9B7001C5AA9 /* TextRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C068CDA825EAC9B7001C5AA9 /* TextRecognition.swift */; };
 		F643FF9B2B9A5A2700D839D0 /* DataParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F643FF9A2B9A5A2700D839D0 /* DataParse.swift */; };
+		F69541242B9E7C5600440899 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69541232B9E7C5600440899 /* TableView.swift */; };
+		F69541262B9FFEA500440899 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69541252B9FFEA500440899 /* TableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		C068CDA525EAC098001C5AA9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C068CDA825EAC9B7001C5AA9 /* TextRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognition.swift; sourceTree = "<group>"; };
 		F643FF9A2B9A5A2700D839D0 /* DataParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParse.swift; sourceTree = "<group>"; };
+		F69541232B9E7C5600440899 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		F69541252B9FFEA500440899 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +73,11 @@
 				C068CDA125EABAE0001C5AA9 /* ScannerView.swift */,
 				C068CDA825EAC9B7001C5AA9 /* TextRecognition.swift */,
 				F643FF9A2B9A5A2700D839D0 /* DataParse.swift */,
+				F69541232B9E7C5600440899 /* TableView.swift */,
 				C068CD9025EAB78A001C5AA9 /* Assets.xcassets */,
 				C068CD9525EAB78A001C5AA9 /* Info.plist */,
 				C068CD9225EAB78A001C5AA9 /* Preview Content */,
+				F69541252B9FFEA500440899 /* TableViewModel.swift */,
 			);
 			path = ScanAndRecognizeText;
 			sourceTree = "<group>";
@@ -158,6 +164,8 @@
 				C068CDA225EABAE0001C5AA9 /* ScannerView.swift in Sources */,
 				F643FF9B2B9A5A2700D839D0 /* DataParse.swift in Sources */,
 				C068CD9D25EAB824001C5AA9 /* TextPreviewView.swift in Sources */,
+				F69541242B9E7C5600440899 /* TableView.swift in Sources */,
+				F69541262B9FFEA500440899 /* TableViewModel.swift in Sources */,
 				C068CDA925EAC9B7001C5AA9 /* TextRecognition.swift in Sources */,
 				C068CD8D25EAB787001C5AA9 /* ScanAndRecognizeTextApp.swift in Sources */,
 			);
